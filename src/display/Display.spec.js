@@ -6,17 +6,17 @@ import "react-testing-library/cleanup-after-each";
 import Display from "./Display.js";
 
 describe("<Display />", () => {
-  it("displays closed when gate is closed", () => {
+  it("displays open when gate is open", () => {
     const { getByText } = render(<Display />);
-    const closedDiv = getByText(/open/i);
+    const openDiv = getByText(/open/i);
 
-    expect(closedDiv).toBeTruthy();
+    expect(openDiv).toBeTruthy();
   });
 
-  it("displays locked when gate is locked", () => {
+  it("displays unlocked when gate is unlocked", () => {
     const { getByText } = render(<Display />);
-    const lockedDiv = getByText(/unlocked/i);
+    const unlockedDiv = getByText(/unlocked/i);
 
-    expect(lockedDiv).toBeTruthy();
+    expect(unlockedDiv).toBeTruthy();
   });
 });
