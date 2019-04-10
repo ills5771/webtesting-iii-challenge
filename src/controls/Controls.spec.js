@@ -18,6 +18,5 @@ describe("<Controls />", () => {
     const openButton = getByText(/close gate/i);
     fireEvent.click(openButton);
     expect(openButton.disabled).toEqual(false);
-    // getByText(/open gate/i);
   });
 });
