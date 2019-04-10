@@ -12,13 +12,3 @@ describe("<Dashboard />", () => {
     expect(tree).toMatchSnapshot();
   });
 });
-
-describe("<Controls />", () => {
-  it("should lock gate when pressing lock gate button", () => {
-    const { getByText } = render(<Dashboard />);
-    const lockButton = getByText(/lock gate/i);
-    fireEvent.click(lockButton);
-
-    getByText(/locked/i);
-  });
-});
